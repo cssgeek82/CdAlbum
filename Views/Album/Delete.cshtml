@@ -1,0 +1,43 @@
+﻿@model CdAlbum.Models.Album
+
+@{
+    ViewData["Title"] = "Radera";
+}
+
+<h2>Radera</h2>
+
+<h3>Är du helt säker på att du vill radera detta album?</h3>
+<div>
+    <dl class="delDiv">
+        <div class="del">
+            <dt class="delName">
+                @Html.DisplayNameFor(model => model.AlbumName)
+            </dt>
+            <dd class="delItem">
+                @Html.DisplayFor(model => model.AlbumName)
+            </dd>
+        </div>
+        <div class="del">
+            <dt class="delName">
+                @Html.DisplayNameFor(model => model.Artist)
+            </dt>
+            <dd class="delItem">
+                @Html.DisplayFor(model => model.Artist)
+            </dd>
+        </div>
+        <div class="del">
+            <dt class="delName">
+                @Html.DisplayNameFor(model => model.ReleaseYear)
+            </dt>
+            <dd class="delItem">
+                @Html.DisplayFor(model => model.ReleaseYear)
+            </dd>
+        </div>
+    </dl>
+    
+    <form asp-action="Delete">
+        <a class="btn btnCreate" asp-action="Index">Ångra</a>
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Radera" class="btn btnDel" />
+    </form>
+</div>

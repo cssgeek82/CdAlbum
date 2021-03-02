@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min CD-samling -- @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/layout.css" />
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body>
+    <header class="mainheader">
+        <div class="headerlogo">
+            <a asp-controller="Album" asp-action="Index"><img class="logoimage" src="~/img/cdbild.png" alt="Cd-skiva" /></a>
+        </div>
+        <h1 class="headername">Min CD-samling</h1>
+        <nav class="mainnav">
+            <ul>
+                <li class="mainli"><a asp-area="" asp-controller="Album" asp-action="Index">Album</a></li>
+                <li class="mainli"><a asp-area="" asp-controller="Album" asp-action="Create">Lägg till</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="mainfooter">
+        <p>Lena Tibbling 2021</p>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

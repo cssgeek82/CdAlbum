@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CdAlbum.Models.Album>
+
+@{
+    ViewData["Title"] = "Alla skivor";
+}
+
+<h2>Alla cd-skivor</h2>
+
+
+<table class="showCds">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlbumName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseYear)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="test">
+            <td>
+                @Html.DisplayFor(modelItem => item.Artist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlbumName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseYear)
+            </td>
+            <td>
+                <a class="btn btnOne" asp-action="Edit" asp-route-id="@item.Id">Ändra</a>
+                <a class="btn btnOne" asp-action="Details" asp-route-id="@item.Id">Detaljer</a>
+                <a class="btn btnDel" asp-action="Delete" asp-route-id="@item.Id">Radera</a>
+            </td>
+        </tr>
+
+}
+    </tbody>
+</table>
+
+<p class="pCreate">
+    <a class="btn btnCreate" asp-action="Create">Lägg till ny</a>
+</p>

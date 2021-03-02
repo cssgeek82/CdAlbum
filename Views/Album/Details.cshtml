@@ -1,0 +1,43 @@
+﻿@model CdAlbum.Models.Album
+
+@{
+    ViewData["Title"] = "Detaljer";
+}
+
+<h2>Detaljer</h2>
+
+<div class="delDiv">
+    <dl>
+        <div class="del">
+            <dt class="delName">
+                @Html.DisplayNameFor(model => model.AlbumName)
+            </dt>
+            <dd class="delItem">
+                @Html.DisplayFor(model => model.AlbumName)
+            </dd>
+        </div>
+        <div class="del">
+            <dt class="delName">
+                @Html.DisplayNameFor(model => model.Artist)
+            </dt>
+            <dd class="delItem">
+                @Html.DisplayFor(model => model.Artist)
+            </dd>
+        </div>
+        <div class="del">
+            <dt class="delName">
+                @Html.DisplayNameFor(model => model.ReleaseYear)
+            </dt>
+            <dd class="delItem">
+                @Html.DisplayFor(model => model.ReleaseYear)
+            </dd>
+        </div>
+    </dl>
+    <div class="editBtn">
+        <a class="btn btnCreate" asp-action="Edit" asp-route-id="@Model.Id">Ändra</a>
+    </div>
+</div>
+
+<div class="back">
+    <a asp-action="Index">&larr; Tillbaka</a>
+</div>

@@ -1,0 +1,104 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.mainheader {
+    background-color: #000;
+    color: #fff;
+    display: grid; 
+}
+@media screen and (min-width: 1000px) {
+    .mainheader {
+        grid-template-columns: 240px auto auto;
+        grid-template-areas: "hlogo hname hnav";
+    }
+}
+@media screen and (max-width: 999px) {
+    .mainheader {
+        grid-template-columns: 100%;
+        grid-template-areas: "hlogo" "hname" "hnav";
+        justify-items: center; 
+    }
+}
+.headername {
+    grid-area: hname; 
+    color: silver; 
+    font-size: 48px; 
+    align-self: center; 
+}
+.headerlogo {
+    grid-area: hlogo; 
+    padding: 30px; 
+}
+.logoimage {
+    width: 100%;
+    max-width: 200px; 
+}
+
+/* Nav */
+.mainnav {
+    margin: 0;
+    grid-area: hnav;
+    padding-top: 20px; 
+    padding-right: 20px; 
+}
+
+    .mainnav ul {
+        text-align: right;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+.mainli {
+    background-color: #ffffff;
+    display: inline-block;
+    min-width: 150px;
+    border: 2px solid #000;
+    margin: 0;
+    margin-left: 30px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+    .mainli:hover {
+        background-color: silver;
+    }
+
+    .mainli a {
+        color: #000000;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 20px;
+    }
+        .mainli a:hover {
+            color: #ffffff;
+        }
+
+/* Middle section */
+.container {
+    background-color: #fff;
+    color: #000;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/*Footer */
+.mainfooter {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center; 
+}

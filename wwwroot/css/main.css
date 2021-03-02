@@ -1,0 +1,114 @@
+﻿/* Headings */
+h2 {
+    margin-bottom: 20px; 
+    font-size: 32px; 
+}
+
+/* Buttons */
+.btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px; 
+    font-size: 14px; 
+    border: none; 
+    cursor: pointer; 
+}
+    .btn:hover {
+        box-shadow: none;
+    }
+
+.btnOne {
+    background-color: silver;
+    color: #000;
+    box-shadow: 5px 2px 5px #777777;
+}
+.btnDel {
+    background-color: red;
+    color: #fff;
+    box-shadow: 5px 2px 5px darkred;
+}
+.editBtn {
+    text-align: right; 
+}
+.btnCreate {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 5px 2px 5px #777777;
+}
+.pCreate {
+    margin-top: 20px;
+}
+
+/* Index-page */
+.showCds th {
+    font-weight: bold;
+    font-size: 20px; 
+    text-align: left;
+    padding: 10px 10px 10px 0;
+}
+.showCds td {
+    text-align: left;
+    padding: 10px 10px 10px 0; 
+}
+/* Form */
+.form {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-areas: "flabel finput" ". valid";
+    max-width: 500px; 
+    align-items: center;
+}
+.formLabel {
+    grid-area: flabel;
+    text-align: right;
+    margin-right: 10px;
+}
+.formInput {
+    grid-area: finput; 
+    padding: 4px 0; 
+    margin: 10px 0; 
+}
+.valid {
+    color: red;
+    grid-area: valid;
+}
+
+/* Pages: Create & Edit */
+.addNew {
+    border: 2px solid #000; 
+    max-width: 650px; 
+    padding-top: 20px; 
+}
+.addBtn {
+    text-align: right; 
+    margin: 20px; 
+}
+.back {
+    margin-top: 20px; 
+}
+.back a {
+    color: #000;
+    text-decoration: none; 
+}
+
+/* Page: Delete & Details */
+.delDiv {
+    border: 1px solid #000; 
+    max-width: 600px; 
+    padding: 20px; 
+    margin: 10px 0; 
+}
+.del {
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-template-areas: "deln deli";
+}
+.delName {
+    font-weight: bold; 
+    grid-area: deln; 
+}
+.delItem {
+    grid-area: deli;
+}

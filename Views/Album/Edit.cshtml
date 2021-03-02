@@ -1,0 +1,42 @@
+﻿@model CdAlbum.Models.Album
+
+@{
+    ViewData["Title"] = "Ändra";
+}
+
+<h2>Ändra</h2>
+
+<div class="addNew">
+    <div>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="valid"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form">
+                <label asp-for="Artist" class="formLabel"></label>
+                <input asp-for="Artist" class="formInput" />
+                <span asp-validation-for="Artist" class="valid"></span>
+            </div>
+            <div class="form">
+                <label asp-for="AlbumName" class="formLabel"></label>
+                <input asp-for="AlbumName" class="formInput" />
+                <span asp-validation-for="AlbumName" class="valid"></span>
+            </div>
+            <div class="form">
+                <label asp-for="ReleaseYear" class="formLabel"></label>
+                <input asp-for="ReleaseYear" class="formInput" />
+                <span asp-validation-for="ReleaseYear" class="valid"></span>
+            </div>
+            <div class="addBtn">
+                <input type="submit" value="Spara" class="btn btnCreate btnAdd" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="back">
+    <a asp-action="Index">&larr; Tillbaka</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
